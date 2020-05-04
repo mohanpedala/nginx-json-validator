@@ -1,21 +1,27 @@
 # Nginx Validating Request Bodies (njs module)
 
 ## Build
-docker build -t nginx-jv .
-
+    ```
+    docker build -t nginx-jv .
+    ```
 ## Run command
-docker run -p 80:80 --name nginx -d nginx-jv
-
+    ```
+    docker run -p 80:80 --name nginx -d nginx-jv
+    ```
 ## Run command with volume mount
-docker run -p 80:80 -v $(pwd)/app:/app --name nginx -d nginx-jv
-
+    ```
+    docker run -p 80:80 -v $(pwd)/app:/app --name nginx -d nginx-jv
+    ```
 ## exec
-docker exec -it nginx bash
-
+    ```
+    docker exec -it nginx bash
+    ```
 ## reload nginx
-nginx -s reload
-
+    ```
+    nginx -s reload
+    ```
 ## Stop and destroy
+
     ```
     docker rm -f nginx
     ```
@@ -46,6 +52,7 @@ nginx -s reload
     ```
 
 ## Clean up environment
+
     ```
     docker rm -f nginx && docker rmi nginx-jv
     ```
